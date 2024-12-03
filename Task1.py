@@ -3,15 +3,12 @@ def process_employee_data(input_string: str) -> str:
     ages = [int(i) for i in updated_data if i.isdigit()]
     ages.sort()
     n = len(ages)
+    m = len(ages) // 2
     if n % 2 > 0:
-        m = n // 2
         mid_age = ages[m]
     else:
-        mid_age = round(sum(ages[n // 2 - 1: n // 2 + 1]) / 2)
-    min_age = ages[0]
-    max_age = ages[n - 1]
-    result = f'{min_age} {mid_age} {max_age}'
-    return result
+        mid_age = round(sum(ages[m - 1: m + 1]) / 2)
+    return f'{ages[0]} {mid_age} {ages[n-1]}'
 
 
 input_data = input()
