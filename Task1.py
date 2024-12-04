@@ -3,7 +3,7 @@ def process_employee_data(input_string: str) -> str:
     ages = [int(i) for i in updated_data if i.isdigit()]
     ages.sort()
     n = len(ages)
-    m = len(ages) // 2
+    m = n // 2
     if n % 2 > 0:
         mid_age = ages[m]
     else:
