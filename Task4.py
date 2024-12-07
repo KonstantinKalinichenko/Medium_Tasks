@@ -6,8 +6,19 @@ class TextProcessor:
         self.text = text
 
     def extract_emails(self):
-        """Ваш код"""
-        pass
+        pattern = r'\b[A-Za-z0-9][A-Za-z0-9._-]*@[A-Za-z0-9.-]+\.(?:ru|com|org|net)\b'
+        result = re.findall(pattern, self.text)
+        return result
+
 
 input_text = input()
-"""Ваш код"""
+Text = TextProcessor(input_text)
+a = Text.extract_emails()
+if len(a) == 0:
+    print('Не найдено')
+else:
+    for i in a:
+        print(i)
+
+
+

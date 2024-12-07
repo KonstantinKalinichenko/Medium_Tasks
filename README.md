@@ -130,7 +130,8 @@ print(result)
 Это текст с email user123@example.com и user456@mail.ru, но не example.com
 
 •	_Выходные данные:_  
-user123@example.com user456@mail.ru  
+user123@example.com  
+user456@mail.ru  
 
 **Пример 2**  
 •	_Входные данные:_  
